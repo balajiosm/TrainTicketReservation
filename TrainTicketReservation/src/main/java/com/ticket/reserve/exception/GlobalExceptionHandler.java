@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler({NoReceiptFoundException.class, NoUserFoundException.class, NoModificationAllowedException.class})
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	public @ResponseBody ErrorResponse handleException(NoReceiptFoundException ex)
+	public @ResponseBody ErrorResponse handleException(Exception ex)
 	{
 		return new ErrorResponse(
 				HttpStatus.BAD_REQUEST.value(), ex.getMessage());

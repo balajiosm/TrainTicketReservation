@@ -9,6 +9,7 @@ import java.util.Random;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ticket.reserve.entity.Purchase;
 import com.ticket.reserve.entity.Train;
@@ -24,6 +25,7 @@ import com.ticket.reserve.model.UserSeat;
 import com.ticket.reserve.repository.PurchaseRepository;
 import com.ticket.reserve.repository.TrainRepository;
 import com.ticket.reserve.repository.UserRepository;
+
 
 @Service
 public class BookingService {
@@ -128,7 +130,8 @@ public class BookingService {
 
 	}
 	
-	public void deleteUser(Long userId) throws  NoUserFoundException {
+	@Transactional
+	public void deleteUser(Long userId) throws  NoReceiptFoundException, NoUserFoundException {
 		Optional<Purchase> purchaseOpt = purchaseRepository.findByUserId(userId);//check if user has any purchases
 		if(purchaseOpt.isPresent()) {
 			Purchase purchase = purchaseOpt.get();
@@ -154,7 +157,7 @@ public class BookingService {
 		}
 	}
 	
-	public UserSeat modifyUserSeat(UserSeat userSeat) throws NoModificationAllowedException {
+	public UserSeat modifyUserSeat(UserSeat userSeat) throws NoModificationAllowedException, NoUserFoundException {
 		String newSeatNo=userSeat.getSeatNo();
 		int newSeatNoInt = Integer.parseInt(newSeatNo.substring(1));
 		Optional<Purchase> purchaseOptByUser = purchaseRepository.findByUserId(userSeat.getUser().getUserId());

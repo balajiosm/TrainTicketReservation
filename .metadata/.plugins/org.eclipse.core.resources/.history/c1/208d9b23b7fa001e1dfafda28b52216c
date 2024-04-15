@@ -1,0 +1,11 @@
+package com.ticket.reserve;
+
+import org.junit.jupiter.api.Test;
+
+public class UserControllerTests extends AbstractTest{
+
+	@Test
+	void contextLoads() {
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.ticket.reserve.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ticket.reserve.model.BookingRequestDTO;
+import com.ticket.reserve.model.BookingResponseDTO;
+
+@Service
+public class BookingService {
+	
+	@Autowired
+	TrainService trainService;
+	
+	public BookingResponseDTO purchaseTicket(BookingRequestDTO purchaseRequest) {
+		
+	}
+
+}

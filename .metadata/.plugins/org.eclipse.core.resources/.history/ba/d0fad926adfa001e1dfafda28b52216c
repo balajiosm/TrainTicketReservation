@@ -1,0 +1,24 @@
+package com.ticket.reserve.model;
+
+public class UserSeat {
+	
+	private UserDTO userDTO;
+	private int seatNo;
+	
+	
+	public UserDTO getUserDTO() {
+		return userDTO;
+	}
+	public void setUserDTO(UserDTO userDTO) {
+		this.userDTO = userDTO;
+	}
+	public int getSeatNo() {
+		return seatNo;
+	}
+	public void setSeatNo(int seatNo) {
+		this.seatNo = seatNo;
+	}
+	
+	
+
+}

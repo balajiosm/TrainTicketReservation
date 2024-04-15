@@ -1,0 +1,27 @@
+package com.ticket.reserve.model;
+
+import com.ticket.reserve.entity.User;
+
+public class UserSeat {
+	
+	private User user;
+	private int seatNo;
+	
+	
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public int getSeatNo() {
+		return seatNo;
+	}
+	public void setSeatNo(int seatNo) {
+		this.seatNo = seatNo;
+	}
+	
+	
+
+}

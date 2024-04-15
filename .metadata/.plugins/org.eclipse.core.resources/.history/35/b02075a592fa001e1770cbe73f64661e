@@ -1,0 +1,47 @@
+package com.ticket.reserve.model;
+
+import java.util.Date;
+
+public class BookingRequestDTO {
+	
+	private String fromStation;
+	private String toStation;
+	private UserDTO userDTO;
+	private Date bookingDate;
+	private Double pricePaid;
+	
+	
+	public String getFromStation() {
+		return fromStation;
+	}
+	public void setFromStation(String fromStation) {
+		this.fromStation = fromStation;
+	}
+	public String getToStation() {
+		return toStation;
+	}
+	public void setToStation(String toStation) {
+		this.toStation = toStation;
+	}
+	public UserDTO getUserDTO() {
+		return userDTO;
+	}
+	public void setUserDTO(UserDTO userDTO) {
+		this.userDTO = userDTO;
+	}
+	public Date getBookingDate() {
+		return bookingDate;
+	}
+	public void setBookingDate(Date bookingDate) {
+		this.bookingDate = bookingDate;
+	}
+	public Double getPricePaid() {
+		return pricePaid;
+	}
+	public void setPricePaid(Double pricePaid) {
+		this.pricePaid = pricePaid;
+	}
+	
+	
+
+}

@@ -1,0 +1,19 @@
+package com.ticket.reserve;
+
+import java.util.Random;
+
+public class Example {
+
+	public static void main(String[] args) {
+		static int randomInt;
+		try {
+			randomInt = Random.nextInt(6);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(randomInt);
+
+	}
+
+}

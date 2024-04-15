@@ -1,0 +1,5 @@
+package com.ticket.reserve.model;
+
+public class UserSeat {
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserControllerTests" project="TrainTicketReservation" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.ticket.reserve.UserControllerTests" time="0.873" displayname="UserControllerTests" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.UserControllerTests]">
+    <testcase name="createUser" classname="com.ticket.reserve.UserControllerTests" time="0.873" displayname="createUser()" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.UserControllerTests]/[method:createUser()]">
+      <error>java.lang.NullPointerException: Cannot invoke "org.springframework.test.web.servlet.MockMvc.perform(org.springframework.test.web.servlet.RequestBuilder)" because "this.mvc" is null&#13;
+	at com.ticket.reserve.UserControllerTests.createUser(UserControllerTests.java:28)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+package com.ticket.reserve.entity;
+
+public class User {
+
+}

@@ -1,0 +1,24 @@
+package com.ticket.reserve.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ticket.reserve.entity.Train;
+import com.ticket.reserve.model.BookingRequestDTO;
+import com.ticket.reserve.model.BookingResponseDTO;
+import com.ticket.reserve.repository.TrainRepository;
+
+@Service
+public class BookingService {
+	
+	@Autowired
+	TrainRepository trainRepository;
+	
+	public BookingResponseDTO purchaseTicket(BookingRequestDTO purchaseRequest) {
+		Optional<Train> trainInfo = trainRepository.findById(purchaseRequest.getTrainId());
+		
+	}
+
+}

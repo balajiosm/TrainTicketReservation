@@ -1,0 +1,11 @@
+package com.ticket.reserve.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "SeatAllocation")
+public class SeatAllocation {
+
+}
+

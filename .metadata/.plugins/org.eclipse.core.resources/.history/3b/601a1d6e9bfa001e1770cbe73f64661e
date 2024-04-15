@@ -1,0 +1,73 @@
+package com.ticket.reserve.service;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ticket.reserve.entity.Train;
+import com.ticket.reserve.model.BookingRequestDTO;
+import com.ticket.reserve.model.BookingResponseDTO;
+import com.ticket.reserve.repository.TrainRepository;
+
+@Service
+public class BookingService {
+
+	private static final int SECTION_SEAT_COUNT = 50;
+	private static List<Integer> seatListA;
+	private static List<Integer> seatListB;
+
+	static {
+		for(int i=0; i < SECTION_SEAT_COUNT; i++) {
+			seatListA.add(i+1);
+			seatListB.add(i+1);
+		}
+		Collections.shuffle(seatListA);
+		Collections.shuffle(seatListB);
+	}
+
+	@Autowired
+	TrainRepository trainRepository;
+	
+	@Autowired
+	PurchaseRepository purchaseRepository;
+
+	public BookingResponseDTO purchaseTicket(BookingRequestDTO purchaseRequest) {
+		Train trainInfo = null;
+		Random rand = new Random();
+		BookingResponseDTO bookingResponseDTO = new BookingResponseDTO();
+		Optional<Train> trainInfoOpt = trainRepository.findById(purchaseRequest.getTrainId());
+		if(trainInfoOpt.isPresent()) {
+			trainInfo = trainInfoOpt.get();
+			int totalSeat = trainInfo.getTotalSeats();
+			if(totalSeat > 0) {//booking and allocating seat starts
+				int randNum = rand.nextInt(2);
+				String seatNo = getSeatNoSectionWise(randNum);
+				
+			}
+		}
+
+	}
+
+	private String getSeatNoSectionWise(int randNum) {
+		String sectionSeatNo="";
+		switch (randNum) {
+		case 0:
+			sectionSeatNo = "A" + seatListA.get(0);//always take the first element as seat 
+			seatListA.remove(0);//and remove it
+			break;
+		case 1:
+			sectionSeatNo = "B" + seatListB.get(0);//always take the first element as seat 
+			seatListB.remove(0);//and remove it
+			break;
+		default:
+			break;
+		}
+		return sectionSeatNo;
+
+	}
+
+}

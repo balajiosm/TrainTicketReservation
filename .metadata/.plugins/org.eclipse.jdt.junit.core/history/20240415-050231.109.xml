@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserServiceTest" project="TrainTicketReservation" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.ticket.reserve.service.UserServiceTest" time="1.606" displayname="UserServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.service.UserServiceTest]">
+    <testcase name="givenUserObject_whenSaveUser_thenReturnUserObject" classname="com.ticket.reserve.service.UserServiceTest" time="1.606" displayname="JUnit test for saveUser method" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.service.UserServiceTest]/[method:givenUserObject_whenSaveUser_thenReturnUserObject()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.ticket.reserve.entity.User.setFirstName(String)" because "this.user" is null&#13;
+	at com.ticket.reserve.service.UserServiceTest.setup(UserServiceTest.java:32)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

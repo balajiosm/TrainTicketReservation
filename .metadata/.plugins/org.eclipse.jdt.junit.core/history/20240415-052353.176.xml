@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserControllerTests" project="TrainTicketReservation" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.ticket.reserve.UserControllerTests" time="1.118" displayname="UserControllerTests" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.UserControllerTests]">
+    <testcase name="createUser" classname="com.ticket.reserve.UserControllerTests" time="1.118" displayname="createUser()" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.UserControllerTests]/[method:createUser()]">
+      <failure>
+        <expected>{"userId":1,"firstName":"Balaji","lastName":"OSM","emailAddress":"balajiosm@gmail.com"}</expected>
+        <actual>{"userId":10,"firstName":"Balaji","lastName":"OSM","emailAddress":"balajiosm@gmail.com"}</actual>
+        org.junit.ComparisonFailure: expected:&lt;{"userId":1[],"firstName":"Balaji...&gt; but was:&lt;{"userId":1[0],"firstName":"Balaji...&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:117)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:146)&#13;
+	at com.ticket.reserve.UserControllerTests.createUser(UserControllerTests.java:32)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+
+      </failure>
+    </testcase>
+  </testsuite>
+</testrun>

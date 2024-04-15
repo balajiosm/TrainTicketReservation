@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserServiceTest" project="TrainTicketReservation" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.ticket.reserve.service.UserServiceTest" time="1.618" displayname="UserServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.service.UserServiceTest]">
+    <testcase name="givenUserObject_whenSaveUser_thenReturnUserObject" classname="com.ticket.reserve.service.UserServiceTest" time="1.618" displayname="JUnit test for saveUser method" uniqueid="[engine:junit-jupiter]/[class:com.ticket.reserve.service.UserServiceTest]/[method:givenUserObject_whenSaveUser_thenReturnUserObject()]">
+      <error>org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -&gt; at com.ticket.reserve.service.UserServiceTest.givenUserObject_whenSaveUser_thenReturnUserObject(UserServiceTest.java:44)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.&#13;
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>
